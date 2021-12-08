@@ -8,6 +8,7 @@ authors = ["None"]
 python = "^3.8"
 streamlit = "^1.2.0"
 plotly = "^5.4.0"
+pytest = "^6.2.5"
 
 [tool.poetry.dev-dependencies]
 
