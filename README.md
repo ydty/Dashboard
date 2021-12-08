@@ -1,4 +1,5 @@
 # Dashboard
+![](https://github.com/ydty/dashboard/workflows/pytest/badge.svg)
 
 ## Usage
  
