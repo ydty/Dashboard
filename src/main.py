@@ -3,15 +3,21 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 
-# Layout (Main)
-st.markdown("## plotly_chart")
-df = px.data.iris()
+def main():
+    """Streamlit application
+    """
 
-fig = px.scatter(df, x="sepal_width", y="sepal_length", color="species",
-                 size='petal_length', hover_data=['petal_width'])
+    st.title("Log Dashboard")
+    uploaded_file = st.file_uploader("csvファイルを選択してください", type="csv")
 
-# Plot
-st.plotly_chart(fig, use_container_width=True)
+    if uploaded_file is not None:
 
-# Layout (Sidebar)
-st.sidebar.markdown("## 設定項目や検索項目など")
+      plot_df = pd.read_csv(uploaded_file)
+
+      fig = px.scatter(plot_df, x="f1", y="f2", color="color", hover_name="name" )
+      st.plotly_chart(fig, use_container_width=True)
+
+      st.write(plot_df)
+
+if __name__ == "__main__":
+    main()
