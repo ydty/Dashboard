@@ -37,12 +37,7 @@ jobs:
       # pytest を実行する
       - name: Run Tests
         run: poetry run pytest tests/
-      
-  deploy:
-    steps:
-      # リポジトリをチェックアウトする
-      - name: Checkout
-        uses: actions/checkout@v2
+
       # 成果物を保存する
       - name: Save Artifacts
         uses: actions/upload-artifact@v2
