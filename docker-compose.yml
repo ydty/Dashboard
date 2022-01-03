@@ -9,4 +9,4 @@ services:
     working_dir: /app
     ports:
       - "8501:8501"
-    command: streamlit run src/main.py
+    command: streamlit run src/dashboard/main.py

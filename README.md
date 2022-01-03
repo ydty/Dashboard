@@ -24,5 +24,5 @@ poetry install
 #### dashboard(streamlit)の起動
 ```cmd
 rem 起動(localhost:8501)
-streamlit run src/main.py
+streamlit run src/dashboard/main.py
 ```
